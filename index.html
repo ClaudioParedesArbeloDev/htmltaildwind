@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/718dcffbc3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="grid grid-rows-[auto_1fr_auto] h-screen">
+    <header class="flex justify-between bg-background text-text items-center w-full border-b-2 border-b-purple-800">
+        <div class="flex">
+            <img class="w-16 p-2 md:w-24 md:m-4" src="./image/logo.png" alt="logo">            
+            <div class="flex flex-col justify-center font-three md:text-2xl">
+                <p>Tienda</p>
+                <p>Claudio</p>
+            </div>
+            
+        </div>
+        <nav class="hidden md:flex list-none text-text">            
+            <a class="p-4 m-2 bg-variant hover:bg-accent hover:text-black transform duration-300 rounded-2xl" href=""><li>Home</li></a>
+            <a class="p-4 m-2 bg-variant hover:bg-accent hover:text-black transform duration-300 rounded-2xl" href=""><li>Producs</li></a>
+            <a class="p-4 m-2 bg-variant hover:bg-accent hover:text-black transform duration-300 rounded-2xl" href=""><li>About</li></a>
+            <a class="p-4 m-2 bg-variant hover:bg-accent hover:text-black transform duration-300 rounded-2xl" href=""><li>Contact</li></a>
+        </nav>
+        <div class="hidden md:flex pr-8 ">
+            <a href="" class="mx-4"><p>Login</p></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="md:hidden">
+            <i class="fa-solid fa-bars p-6 text-[1.4rem] text-text"></i>
+        </div>
+    </header>
+    <main class="bg-background-variant text-text" >
+
+        <h1>Hello World</h1>
+    </main>
+    <footer class="flex justify-around bg-background text-text font-two items-center">
+        <div>
+            <p class="text-xs md:text-xl">© 2025 Tienda Claudio</p>
+        </div>
+        <div>
+            <a href=""><i class="fa-brands fa-square-instagram text-3xl p-2 md:text-5xl md:p-4 hover:text-variant"></i></a>
+            <a href=""><i class="fa-brands fa-square-github text-3xl p-2 md:text-5xl md:p-4 hover:text-variant"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin text-3xl p-2 md:text-5xl md:p-4 hover:text-variant"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
