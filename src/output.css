@@ -245,9 +245,6 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .cursor-pointer {
-    cursor: pointer;
-  }
   .resize {
     resize: both;
   }
@@ -272,9 +269,6 @@
   .justify-center {
     justify-content: center;
   }
-  .self-center {
-    align-self: center;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -286,18 +280,8 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-b-2 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 2px;
-  }
   .border-accent2-900 {
     border-color: var(--color-accent2-900);
-  }
-  .border-b-purple-800 {
-    border-bottom-color: var(--color-purple-800);
-  }
-  .bg-accent1-500 {
-    background-color: var(--color-accent1-500);
   }
   .bg-background-300 {
     background-color: var(--color-background-300);
@@ -314,20 +298,8 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
   }
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
@@ -343,9 +315,6 @@
   }
   .font-one {
     font-family: var(--font-one);
-  }
-  .font-three {
-    font-family: var(--font-three);
   }
   .font-two {
     font-family: var(--font-two);
@@ -365,9 +334,6 @@
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
   }
-  .text-cyan-600 {
-    color: var(--color-cyan-600);
-  }
   .lowercase {
     text-transform: lowercase;
   }
@@ -384,13 +350,6 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
-  }
-  .hover\:bg-accent-100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-accent-100);
-      }
-    }
   }
   .hover\:bg-accent2-500 {
     &:hover {
@@ -421,14 +380,34 @@
       display: none;
     }
   }
+  .md\:h-full {
+    @media (width >= 48rem) {
+      height: 100%;
+    }
+  }
   .md\:w-24 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 24);
     }
   }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
+    }
+  }
   .md\:p-4 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:pb-8 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 8);
     }
   }
   .md\:text-2xl {
