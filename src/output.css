@@ -8,8 +8,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-cyan-600: oklch(60.9% 0.126 221.723);
     --color-purple-800: oklch(43.8% 0.218 303.724);
-    --color-black: #000;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -23,11 +23,10 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-one: "Montserrat", sans-serif;
     --font-two: "Roboto Mono", monospace;
     --font-three: "Roboto", sans-serif;
     --color-background-100: #FFFFFF;
@@ -228,6 +227,12 @@
   .h-screen {
     height: 100vh;
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-5\/6 {
+    width: calc(5/6 * 100%);
+  }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
@@ -239,6 +244,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -264,6 +272,9 @@
   .justify-center {
     justify-content: center;
   }
+  .self-center {
+    align-self: center;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -271,30 +282,28 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
+  .border-accent2-900 {
+    border-color: var(--color-accent2-900);
+  }
   .border-b-purple-800 {
     border-bottom-color: var(--color-purple-800);
-  }
-  .bg-accent-100 {
-    background-color: var(--color-accent-100);
-  }
-  .bg-accent-500 {
-    background-color: var(--color-accent-500);
   }
   .bg-accent1-500 {
     background-color: var(--color-accent1-500);
   }
-  .bg-accent2-100 {
-    background-color: var(--color-accent2-100);
+  .bg-background-300 {
+    background-color: var(--color-background-300);
   }
-  .bg-accent2-500 {
-    background-color: var(--color-accent2-500);
-  }
-  .bg-variant-100 {
-    background-color: var(--color-variant-100);
+  .bg-background-500 {
+    background-color: var(--color-background-500);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -305,14 +314,45 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-justify {
+    text-align: justify;
+  }
+  .font-one {
+    font-family: var(--font-one);
   }
   .font-three {
     font-family: var(--font-three);
   }
   .font-two {
     font-family: var(--font-two);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -324,6 +364,15 @@
   }
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
+  }
+  .text-cyan-600 {
+    color: var(--color-cyan-600);
+  }
+  .lowercase {
+    text-transform: lowercase;
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .underline {
     text-decoration-line: underline;
@@ -343,17 +392,17 @@
       }
     }
   }
+  .hover\:bg-accent2-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-accent2-500);
+      }
+    }
+  }
   .hover\:text-accent-500 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-accent-500);
-      }
-    }
-  }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
       }
     }
   }
@@ -386,6 +435,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .md\:text-4xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
   .md\:text-5xl {
