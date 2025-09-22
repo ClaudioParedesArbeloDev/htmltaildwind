@@ -1,5 +1,10 @@
 const container = document.getElementById("container");
 
+const buscar = document.getElementById("search");
+
+
+
+
 fetch('https://fakestoreapi.com/products')
   .then(response => response.json())
   .then(data => {

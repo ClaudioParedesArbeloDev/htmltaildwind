@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../src/output.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/718dcffbc3.js" crossorigin="anonymous"></script>
+   
+
     <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/output.css" rel="stylesheet">
     <title>Tienda Claudio</title>
 </head>
 <body class="grid grid-rows-[auto_1fr_auto] h-screen">
-    <header class="flex justify-between bg-background-500 text-text items-center w-full ">
+    <header class="flex justify-between bg-background-500 text-text-900 items-center w-full ">
         <a href="/index.html" class="flex">
             <img class="w-16 p-2 md:w-24 md:m-4" src="../image/logo.png" alt="logo">            
             <div class="flex flex-col justify-center  md:text-2xl">
-                <p class="uppercase font-one">Tienda</p>
+                <p class="uppercase decoration-0 font-one">Tienda</p>
                 <p class="lowercase font-two">Claudio</p>
             </div>
         </a>
@@ -31,12 +33,13 @@
             <i class="fa-solid fa-bars p-6 text-[1.4rem] text-text"></i>
         </div>
     </header>
-    <main class="bg-background-300 text-text" >
-        <input type="text" class="border-2 border-accent2-700 rounded-2xl p-2" placeholder="Buscar productos">
+    <main class="bg-background-300 text-text flex flex-col" >
+        <div class="flex justify-around m-4">
+            <input type="text" class="border-2 border-accent2-700 w-[400px] rounded-2xl p-2" id="search" placeholder="Buscar productos">
+        </div>
         
         <div id="container" class="flex flex-wrap justify-center w-full">
         </div>
-       
     </main>
     <footer class="flex justify-around bg-background-500 text-text font-two items-center">
         <div>
