@@ -22,7 +22,7 @@ function renderProducts(array){
                         <h3 class="font-bold">$${product.price}</h3>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <button onclick="viewProduct(${product.id})" class="border-2 text-xs mb-2 p-2 rounded-xl border-accent2-500 bg-accent2-300 hover:bg-accent2-500 transition duration-300"> Ver Detalles</button>
+                        <button onclick="viewProduct(${product.id})" class="cursor-pointer border-2 text-xs mb-2 p-2 rounded-xl border-accent2-500 bg-accent2-300 hover:bg-accent2-500 transition duration-300"> Ver Detalles</button>
                     </div>
                 </div>
             `;

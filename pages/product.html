@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <link href="../src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/718dcffbc3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Producto</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tienda Virtual - Producto</title>
 </head>
-<body class="min-h-screen flex flex-col items-center p-6">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800">Detalles del Producto</h1>
-    <div id="product-detail" class="product-detail max-w-lg w-full bg-white border-2 border-accent2-700 rounded-2xl p-6"></div>
-   
-<script src="../js/product2.js"></script>
+<body class="grid grid-rows-[auto_1fr_auto] h-screen">
+   <header class="flex justify-between bg-background-500 text-text items-center w-full ">
+        <a href="/index.html" class="flex">
+            <img class="w-16 p-2 md:w-24 md:m-4" src="../image/logo.png" alt="logo">            
+            <div class="flex flex-col justify-center  md:text-2xl">
+                <p class="uppercase font-one">Tienda</p>
+                <p class="lowercase font-two">Claudio</p>
+            </div>
+        </a>
+        <nav class="hidden md:flex list-none text-text">            
+            <a class="p-4 m-2 border-2 border-accent2-900 hover:bg-accent2-500 transform duration-300 rounded-2xl" href="/index.html"><li>Home</li></a>
+            <a class="p-4 m-2 border-2 border-accent2-900 hover:bg-accent2-500 transform duration-300 rounded-2xl" href="/pages/products.html"><li>Producs</li></a>
+            <a class="p-4 m-2 border-2 border-accent2-900 hover:bg-accent2-500 transform duration-300 rounded-2xl" href="/pages/about.html"><li>About</li></a>
+            <a class="p-4 m-2 border-2 border-accent2-900 hover:bg-accent2-500 transform duration-300 rounded-2xl" href="/pages/contact.html"><li>Contact</li></a>
+        </nav>
+        <div class="hidden md:flex pr-8 ">
+            <a href="" class="mx-4"><p>Login</p></a>
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+        </div>
+        <div class="md:hidden">
+            <i class="fa-solid fa-bars p-6 text-[1.4rem] text-text"></i>
+        </div>
+    </header> 
+
+    <main>
+        <div id="productDetail" class="flex flex-col justify-center items-center">
+
+        </div>
+    </main>
+
+     <footer class="flex justify-around bg-background-500 text-text font-two items-center">
+        <div>
+            <p class="text-xs md:text-xl">© 2025 Tienda Claudio</p>
+        </div>
+        <div>
+            <a href=""><i class="fa-brands fa-square-instagram text-3xl p-2 md:text-5xl md:p-4 hover:text-accent-500"></i></a>
+            <a href=""><i class="fa-brands fa-square-github text-3xl p-2 md:text-5xl md:p-4 hover:text-accent-500"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin text-3xl p-2 md:text-5xl md:p-4 hover:text-accent-500"></i></a>
+        </div>
+    </footer>
+
+    <script src="../js/product.js"></script>
 </body>
 </html>
+
+
